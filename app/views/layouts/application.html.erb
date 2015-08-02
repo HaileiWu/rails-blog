@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= yield :header %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="header">
+	<a href="#" class="logo"><i class="fa fa-fire fa-2x" style="color: #FF6666"></i> Running!o!蚂蚱</a>
+	<a href="" class="view-article"><i class="fa fa-user"></i></a>
+	<a href="" class="view-article"><i class="fa fa-sitemap"></i></a>
+	<a href="" class="view-article"><i class="fa fa-archive"></i></a>
+	<a href="<%= new_article_path %>" class="view-article"><i class="fa fa-pencil"></i></a>
+</div>
+<div class="container">
+	<%= yield %>
+</div>
+
+<!-- <div class="footer">
+	COPYRIGHT © 2014 WKLKEN 
+</div> -->
+
+
+</body>
+</html>

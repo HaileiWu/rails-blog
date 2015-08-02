@@ -1,0 +1,195 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require font-awesome
+ */
+
+* {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box
+}
+pre {
+	padding:0;
+	margin:0;
+	overflow:scroll;
+	/*background: #002b36;*/
+	/*color: #d0d0d0 !important;*/
+	border-width: 0px;
+	background-color: #f9f9f9;
+    padding: 0.8em 0.8em 0.4em;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.125);
+	padding:10px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px
+}
+pre .cmt {
+	color:#aaa
+}
+pre .opt {
+	font-weight:bold
+}
+pre .val {
+	font-style:italic
+}
+.code {
+	display:inline-block;
+	padding:1px 5px
+}
+body {
+	font: 400 14px Avenir, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+	margin:0;
+	padding:0
+}
+
+p {
+	font-family: inherit;
+    font-weight: normal;
+    margin-bottom: 1.11111em;
+}
+
+a {
+	color:#F66169;
+	text-decoration:none !important;
+}
+
+h2 {
+	/*font-weight: 700;	*/
+}
+
+hr {
+	margin-top: 10px;
+}
+
+.container {
+	width:80%;
+	max-width:680px;
+	margin:auto
+}
+.header {
+	font-size: 16px;
+	width:100%;
+	height:60px;
+	line-height:60px;
+	background:#238d69;
+	color:#fff;
+	border-bottom: #F66169 0px solid;
+	margin-bottom: 20px;
+}
+.logo {
+	width:160px;
+	float:left;
+	margin-left:30px;
+	color:#FAEFDE;
+	font-weight:bold;
+	-webkit-transition:all 200ms ease-out;
+	-moz-transition:all 200ms ease-out;
+	-ms-transition:all 200ms ease-out;
+	-o-transition:all 200ms ease-out;
+	transition:all 200ms ease-out
+}
+.logo:hover {
+	color:#fff
+}
+.view-article {
+	display:block;
+	text-align:center;
+	/*background:#F66169;*/
+	color: #FAEFDE;
+	/*width:120px;*/
+	/*height:40px;*/
+	line-height:40px;
+	font-weight:bold;
+	float:right;
+	margin-right:30px;
+	margin-top:8px;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+	-webkit-transition:all 200ms ease-out;
+	-moz-transition:all 200ms ease-out;
+	-ms-transition:all 200ms ease-out;
+	-o-transition:all 200ms ease-out;
+	transition:all 200ms ease-out
+}
+.view-article:hover {
+	color:#fff;
+	/*background:#fff*/
+}
+.light {
+	color:#ccc;
+	font-size:14px
+}
+.themes {
+	padding:0;
+	margin:0;
+	margin-bottom:20px;
+	float:left;
+	width:100%
+}
+.themes li {
+	text-align:center;
+	display:block;
+	float:left;
+	width:22%;
+	margin-left:4%
+}
+.themes li.first {
+	margin-left:0
+}
+.themes li a {
+	display:block;
+	padding:10px;
+	background:#444;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+	color:#eee;
+	-webkit-transition:all 200ms ease-out;
+	-mozilla-transition:all 200ms ease-out;
+	-ms-transition:all 200ms ease-out;
+	-o-transition:all 200ms ease-out;
+	transition:all 200ms ease-out
+}
+.themes li a:hover,.themes li a.active {
+	background:#F66169;
+	color:#FAEFDE
+}
+#toggleActive {
+	padding:10px;
+	width:100%;
+	text-align:center;
+	display:inline-block;
+	background:#444;
+	color:#eee;
+	font-size:14px;
+	cursor:pointer;
+	-webkit-transition:all 200ms ease-out;
+	-mozilla-transition:all 200ms ease-out;
+	-ms-transition:all 200ms ease-out;
+	-o-transition:all 200ms ease-out;
+	transition:all 200ms ease-out;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px
+}
+#toggleActive.active {
+	background:#F66169;
+	color:#FAEFDE
+}
+#scrollUp-active {
+	display:none
+}
+
