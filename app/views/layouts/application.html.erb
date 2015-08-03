@@ -10,6 +10,9 @@
 <body>
 <div class="header">
 	<a href="#" class="logo"><i class="fa fa-fire fa-2x" style="color: #FF6666"></i> Running!o!蚂蚱</a>
+	<%= link_to destroy_admin_session_path, :method => :delete, class: 'view-article' do%>
+		<i class="fa fa-sign-out"></i>
+	<% end %>
 	<a href="" class="view-article"><i class="fa fa-user"></i></a>
 	<a href="" class="view-article"><i class="fa fa-sitemap"></i></a>
 	<a href="" class="view-article"><i class="fa fa-archive"></i></a>
