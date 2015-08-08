@@ -1,5 +1,5 @@
 <div id="title" style="margin-bottom: 30px;">
-	<h2><%= @article.title %><span style="display: block; float: right; font-size: 15px; font-weight: 400;  margin: 18px 0px 0px 0px;"><a style="padding-right: 6px;" href="<%= edit_article_path(@article.id) %>"><i class="fa fa-pencil"></i></a><i class="fa fa-calendar"></i> <%= @article.created_at.to_date %></span></h2>
+	<h2><%= @article.title %><span style="display: block; float: right; font-size: 15px; font-weight: 400;  margin: 18px 0px 0px 0px;"><% if admin_signed_in? %><a style="padding-right: 6px;" href="<%= edit_article_path(@article.id) %>"><i class="fa fa-pencil"></i></a><% end %><i class="fa fa-clock-o"></i> <%= @article.created_at.to_date %></span></h2>
 	<hr>
 </div>
 

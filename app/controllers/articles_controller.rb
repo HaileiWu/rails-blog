@@ -1,9 +1,11 @@
 class ArticlesController < ApplicationController
 
-	before_action :authenticate_admin!
+	before_action :authenticate_admin!, only: [:edit]
 	before_action :set_article, only: [:edit, :update, :show]
+	before_action :set_category, only: [:new, :edit]
 
 	def index
+		@articles = Article.all.order(created_at: :desc)
 	end
 
 	def new
@@ -33,8 +35,13 @@ class ArticlesController < ApplicationController
   		@article = Article.find params[:id]
   	end
 
+  	def set_category
+  		@category = Category.new
+		@categories = Category.all
+  	end
+
   	def set_article_params
-  		params.require(:article).permit(:title, :slug, :content)
+  		params.require(:article).permit(:title, :slug, :content, :category)
   	end
 
 end

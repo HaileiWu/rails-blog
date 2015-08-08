@@ -48,7 +48,14 @@ pre .val {
 	display:inline-block;
 	padding:1px 5px
 }
+
+img {
+	width: 100%;
+}
+
 body {
+	/*background: #f7f7f7;*/
+	/*background-image: url('background.jpg');*/
 	font: 400 14px Avenir, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
 	margin:0;
 	padding:0
@@ -61,7 +68,7 @@ p {
 }
 
 a {
-	color:#F66169;
+	/*color:#F66169;*/
 	text-decoration:none !important;
 }
 

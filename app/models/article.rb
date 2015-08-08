@@ -4,6 +4,7 @@ class Article
 
   field :title, type: String
   field :slug, type: String 
+  field :category, type: String
   field :content, type: String
 
 end

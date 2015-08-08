@@ -11,6 +11,12 @@
     <%= f.text_field :slug, class: 'form-control' %>
   </div>
 
+  <div class="for-group">
+    <%= f.label '分类' %> 
+    <a href="" data-toggle="modal" data-target=".bs-example-modal-lg"><i class="fa fa-plus"></i></a>
+    <%= f.select :category, category_options, {}, class: 'form-control', style: 'margin-bottom: 15px;' %>
+  </div>
+
   <div class="form-group">
     <%= f.label '内容' %>
     <%= f.text_area :content, class: 'form-control', rows: 40 %>
@@ -20,3 +26,40 @@
     <%= f.submit '提交', class: 'btn btn-primary' %>
   </div>
 <% end %>
+
+
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">分类编辑</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered" id="category-table">
+          <thead>
+            <th class="col-md-1">#</th>
+            <th class="col-md-2">分类</th>
+            <th class="col-md-1">操作</th>
+          </thead>
+          <tbody>
+            <% @categories.each_with_index do |category, idx| %>
+              <td></td>
+              <td><%= category.name %></td>
+              <td></td>
+            <% end %>
+          </tbody>  
+        </table>
+      </div>
+      <div class="modal-footer">
+        <%= form_for @category, html: {class: 'form-inline'}, remote: true do |f| %>
+          <div class="form-group">
+            <%= f.label 'Category', class: 'sr-only' %>
+            <%= f.text_field :name, class: 'form-control' %>
+          </div> 
+          <%= f.submit '提交', class: 'btn btn-primary' %> 
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   root 'articles#index'
   resources :articles
+  resources :categories
 
   devise_for :admins, controllers: { sessions: "admins/sessions"}, :skip => :registrations
   # The priority is based upon order of creation: first created -> highest priority.

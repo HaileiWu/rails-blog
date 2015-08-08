@@ -1,1 +1,5 @@
-
+<h2>文章列表</h2>
+<hr>
+<%- @articles.each do |article| %>
+	<h4><%= article.created_at.to_date %> <a href="<%= article_path article%>" style="padding-left: 20px; "><%= article.title %></a></h4>
+<% end %>

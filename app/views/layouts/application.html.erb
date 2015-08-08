@@ -9,14 +9,18 @@
 </head>
 <body>
 <div class="header">
-	<a href="#" class="logo"><i class="fa fa-fire fa-2x" style="color: #FF6666"></i> Running!o!蚂蚱</a>
-	<%= link_to destroy_admin_session_path, :method => :delete, class: 'view-article' do%>
-		<i class="fa fa-sign-out"></i>
+	<a href="#" class="logo"><i class="fa fa-fire fa-2x" style="color: #FF6666"></i> lambda</a>
+	<% if admin_signed_in? %>
+		<%= link_to destroy_admin_session_path, :method => :delete, class: 'view-article' do%>
+			<i class="fa fa-sign-out"></i>
+		<% end %>
 	<% end %>
 	<a href="" class="view-article"><i class="fa fa-user"></i></a>
 	<a href="" class="view-article"><i class="fa fa-sitemap"></i></a>
-	<a href="" class="view-article"><i class="fa fa-archive"></i></a>
-	<a href="<%= new_article_path %>" class="view-article"><i class="fa fa-pencil"></i></a>
+	<a href="<%= articles_path %>" class="view-article"><i class="fa fa-archive"></i></a>
+	<% if admin_signed_in? %>
+		<a href="<%= new_article_path %>" class="view-article"><i class="fa fa-pencil"></i></a>
+	<% end %>
 </div>
 <div class="container">
 	<%= yield %>
